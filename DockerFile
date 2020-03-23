@@ -1,0 +1,4 @@
+FROM centos
+RUN yum -y update && yum install -y nano && yum install -y dos2unix
+COPY alinat .
+RUN dos2unix alinat && ln alinat newHardLink
